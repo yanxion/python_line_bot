@@ -10,8 +10,8 @@ import requests
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('os.environ.get("Channel_Access_Token", None)')
-handler = WebhookHandler('os.environ.get("Channel_Secret", None)')
+line_bot_api = LineBotApi(os.environ.get("Channel_Access_Token", None))
+handler = WebhookHandler(os.environ.get("Channel_Secret", None))
 
 @app.route("/")
 def index():
